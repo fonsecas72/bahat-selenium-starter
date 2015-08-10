@@ -10,6 +10,9 @@
             "email": "hdtfonseca@gmail.com"
         }
     ],
+    "require": {
+        "fonsecas72/selenium-handler": "dev-master"
+    },    
     "autoload": {
         "psr-4": {
             "Fonsecas72\\SeleniumStarterExtension\\": "src/"

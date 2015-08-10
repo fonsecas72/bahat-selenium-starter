@@ -36,11 +36,16 @@ class SeleniumStarterExtension implements Extension
         $httpClient = new Client();
         $waiter = new ResponseWaitter($httpClient);
         $seleniumStarterOptions = new SeleniumStartOptions();
-        $seleniumStarterOptions->enabledXvfb();
+        $seleniumStarterOptions->setSeleniumJarLocation($config['selenium_jar_folder'].'/selenium-server-standalone.jar');
+        if ($config['xvfb']) {
+            $seleniumStarterOptions->enabledXvfb();
+        }
         $seleniumStarter = new SeleniumStarter($seleniumStarterOptions, $process, $waiter, $exeFinder);
         $seleniumStopperOptions = new SeleniumStopOptions();
         $seleniumStopper = new SeleniumStopper($seleniumStopperOptions, $waiter, $httpClient);
         $seleniumDownloaderOptions = new SeleniumDownloaderOptions();
+        $seleniumDownloaderOptions->setSeleniumDestination($config['selenium_jar_folder']);
+
         $seleniumDownloader = new SeleniumDownloader($seleniumDownloaderOptions, $httpClient);
         $seleniumLogWatcher = new LogWatcher();
         $seleniumHandler = new SeleniumHandler(
@@ -50,11 +55,8 @@ class SeleniumStarterExtension implements Extension
         $definition = new Definition('Fonsecas72\SeleniumStarterExtension\SeleniumStarterListener', [$seleniumHandler]);
         $definition->addTag(EventDispatcherExtension::SUBSCRIBER_TAG, array('priority' => 0));
         $container->setDefinition('selenium_starter', $definition);
-
-
-
-
-
+        $container->setParameter('selenium_starter.selenium_jar_folder', $config['selenium_jar_folder']);
+        $container->setParameter('selenium_starter.xvfb', $config['xvfb']);
     }
 
     public function getConfigKey()
@@ -64,7 +66,14 @@ class SeleniumStarterExtension implements Extension
 
     public function configure(ArrayNodeDefinition $builder)
     {
-
+        $builder->children()
+                    ->scalarNode('selenium_jar_folder')
+                    ->isRequired()
+                    ->end()
+                ->end()
+                ->children()
+                    ->booleanNode('xvfb')
+                ->end();
     }
 
     public function process(ContainerBuilder $container)
