@@ -1,4 +1,4 @@
-# behat-selenium-starter
+# Behat Selenium Starter
 
 This is a behat extensions that allows you to automatically download and start selenium server before the start of your  suite.
 
