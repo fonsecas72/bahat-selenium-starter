@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "999b5f13034601a8c738744e4c7e0dce",
+    "hash": "91b2774128f0bf0f0f218071510a595b",
     "packages": [
         {
             "name": "fonsecas72/selenium-handler",

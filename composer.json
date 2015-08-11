@@ -17,5 +17,8 @@
         "psr-4": {
             "Fonsecas72\\SeleniumStarterExtension\\": "src/"
         }
+    },
+    "config": {
+        "bin-dir": "bin"
     }
 }
