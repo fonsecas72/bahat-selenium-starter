@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "91b2774128f0bf0f0f218071510a595b",
+    "hash": "32c3833bf770ffbb707aa51a603df5e5",
     "packages": [
         {
             "name": "fonsecas72/selenium-handler",
-            "version": "dev-master",
+            "version": "0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fonsecas72/selenium-handler.git",
@@ -431,9 +431,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "fonsecas72/selenium-handler": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
