@@ -45,6 +45,7 @@ class SeleniumStarterExtension implements Extension
         $seleniumStopper = new SeleniumStopper($seleniumStopperOptions, $waiter, $httpClient);
         $seleniumDownloaderOptions = new SeleniumDownloaderOptions();
         $seleniumDownloaderOptions->setSeleniumDestination($config['selenium_jar_folder']);
+        $seleniumDownloaderOptions->setSeleniumVersion($config['selenium_version']);
 
         $seleniumDownloader = new SeleniumDownloader($seleniumDownloaderOptions, $httpClient);
         $seleniumLogWatcher = new LogWatcher();
@@ -73,6 +74,11 @@ class SeleniumStarterExtension implements Extension
                 ->end()
                 ->children()
                     ->booleanNode('xvfb')
+                    ->end()
+                ->end()
+                ->children()
+                    ->scalarNode('selenium_version')
+                    ->end()
                 ->end();
     }
 
