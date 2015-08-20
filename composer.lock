@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "32c3833bf770ffbb707aa51a603df5e5",
+    "hash": "da1288be1d0fed0246ce2c4ec5e8444f",
     "packages": [
         {
             "name": "fonsecas72/selenium-handler",
-            "version": "0.0.3",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fonsecas72/selenium-handler.git",
-                "reference": "94524a9bb52fa702935656323fb1b2b117bb1166"
+                "reference": "8dc107a3945db55010d100c56bfddaf1f8c88604"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fonsecas72/selenium-handler/zipball/94524a9bb52fa702935656323fb1b2b117bb1166",
-                "reference": "94524a9bb52fa702935656323fb1b2b117bb1166",
+                "url": "https://api.github.com/repos/fonsecas72/selenium-handler/zipball/8dc107a3945db55010d100c56bfddaf1f8c88604",
+                "reference": "8dc107a3945db55010d100c56bfddaf1f8c88604",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "selenium",
                 "start"
             ],
-            "time": "2015-08-10 10:55:55"
+            "time": "2015-08-20 09:50:24"
         },
         {
             "name": "guzzlehttp/guzzle",

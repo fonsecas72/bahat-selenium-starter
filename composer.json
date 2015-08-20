@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "fonsecas72/selenium-handler": "~0.0.3"
+        "fonsecas72/selenium-handler": "~0.1.0"
     },    
     "autoload": {
         "psr-4": {
